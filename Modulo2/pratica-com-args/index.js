@@ -1,9 +1,12 @@
+//externo
 const minimist = require('minimist')
+
+// interno
+const soma = require('./soma').soma
 
 const args = minimist(process.argv.slice(2))
 
-console.log(args)
+const a = parseInt(args['a'])
+const b = parseInt(args['b'])
 
-const nome = args["nome"]
-
-console.log(nome)
+soma(a, b)
